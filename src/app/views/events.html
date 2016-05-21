@@ -1,0 +1,27 @@
+<div class="table-responsive-vertical md-whiteframe-z1">
+    <table id="table" class="table table-hover table-bordered">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Admin</th>
+            <th>Description</th>
+            <!--<th>Progress</th>-->
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="data in vm.tableData track by $index">
+            <td data-title="ID">{{$index + 1}}</td>
+            <td data-title="Name">{{data.name}}</td>
+            <td data-title="Admin">{{data.admin}}</td>
+            <td data-title="Description">{{data.description}}</td>
+            <!--<td data-title="Progress">-->
+                <!--<md-progress-linear class="table-progress {{data.class}}"-->
+                                    <!--md-mode="determinate"-->
+                                    <!--value={{data.progress}}>-->
+                <!--</md-progress-linear>-->
+            <!--</td>-->
+        </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,30 @@
+<md-content flex class="page-content" ng-controller="LoginController">
+    <div style="height:100%" layout="column" flex id="content" role="main">
+        <md-content layout="vertical" layout-padding md-theme="dark" flex id="content2">
+            <div layout="row" layout-align="center center" layout-fill>
+                <md-whiteframe md-theme="grey" class="md-whiteframe-z1" layout="column" flex="30" layout-padding
+                               layout-margin>
+                    <md-content layout-padding layout-margin md-theme="custom">
+                        <div name="loginForm"
+                              ng-submit="login(vm.credentials)" novalidate>
+                            <md-input-container>
+                                <label>Login</label>
+                                <input id="username" name="username" ng-model="vm.credentials.username">
+                            </md-input-container>
+                            <md-input-container>
+                                <label>Password</label>
+                                <input id="password" ng-model="vm.credentials.password" type="password">
+                            </md-input-container>
+                            <md-input-container layout-align="center center">
+                                <div layout="row" layout-sm="column" layout-margin>
+                                    <md-button ng-click="vm.login(vm.credentials)"  type="submit" class="md-raised" flex="50" flex-sm="100">Login</md-button>
+                                    <md-button class=" md-primary" flex="50" flex-sm="100">Register</md-button>
+                                </div>
+                            </md-input-container>
+                        </div>
+                    </md-content>
+                </md-whiteframe>
+            </div>
+        </md-content>
+    </div>
+</md-content>

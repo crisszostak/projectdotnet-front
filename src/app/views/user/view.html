@@ -1,0 +1,55 @@
+<md-card>
+    <md-card-title>
+        <md-card-title-text>
+            <span class="md-headline">{{vm.event.name}}</span>
+        </md-card-title-text>
+    </md-card-title>
+    <md-card-content>
+        <p>
+            {{vm.event.description}}
+        </p>
+    </md-card-content>
+    <md-card-actions layout="row" layout-align="end center">
+        <md-button>Edit</md-button>
+        <md-button>Delete</md-button>
+    </md-card-actions>
+    <!--<md-card-actions layout="column" layout-align="start">-->
+    <!--<md-button ng-click="releaseKraken()" class="md-primary md-raised">I Dare You!</md-button>-->
+    <!--</md-card-actions>-->
+</md-card>
+
+<md-card>
+    <md-card-title>
+        <span class="md-headline">
+            Events
+        </span>
+    </md-card-title>
+    <md-content class="md-padding" layout-padding>
+        <div class="table-responsive-vertical">
+            <table id="table" class="table table-hover table-bordered">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Start date</th>
+                    <th>End date</th>
+                    <th>Localization</th>
+                    <th>Category</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="data in vm.events track by $index" ui-sref="home.event({id: data.id})">
+                    <td data-title="ID">{{data.id}}</td>
+                    <td data-title="Name">{{data.name}}</td>
+                    <td data-title="Start date">{{data.dateFrom}}</td>
+                    <td data-title="End date">{{data.dateTo}}</td>
+                    <td data-title="Localization">{{data.location}}</td>
+                    <td data-title="Category">{{data.categories}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </md-content>
+</md-card>
+
+

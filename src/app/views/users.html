@@ -1,0 +1,29 @@
+<!-- TODO: Replace table to table component when https://github.com/angular/material/issues/796 will closed -->
+<div class="table-responsive-vertical md-whiteframe-z1">
+    <table id="table" class="table table-hover table-bordered">
+        <thead>
+        <tr>
+            <th>User</th>
+            <th>Username</th>
+            <th>E-mail</th>
+            <th>Organization</th>
+            <th>Role</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="data in vm.tableData track by $index">
+            <td data-title="User">{{data.id}}</td>
+            <td data-title="Username">{{data.username}}</td>
+            <td data-title="E-mail">{{data.email}}</td>
+            <td data-title="Organization">{{data.organization}}</td>
+            <td data-title="Role">{{data.role}}</td>
+            <!--<td data-title="Progress">
+                <md-progress-linear class="table-progress {{data.class}}"
+                                    md-mode="determinate"
+                                    value={{data.progress}}>
+                </md-progress-linear>
+            </td>-->
+        </tr>
+        </tbody>
+    </table>
+</div>
