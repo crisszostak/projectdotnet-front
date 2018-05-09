@@ -19,7 +19,7 @@
   });
 
   function AuthService($q, $http, Session){
-    var todos = [
+    const todos = [
       {text: 'Continuous integration', done: false},
       {text: 'Implement panel-widget directive', done: true},
       {text: 'Add backend', done: false}
